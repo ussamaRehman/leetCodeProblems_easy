@@ -1,3 +1,6 @@
-b = b"hello"         # bytes literal
-print(b[0])          # 104 (ASCII of 'h')
-print(b[1:4]) 
+fruits = ['apple', 'banana']
+n = 0
+t = 9
+fruits.append('kiwi')
+fruits.append(f'{n}range -> {t}')
+print(fruits)
