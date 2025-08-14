@@ -1,16 +1,13 @@
-# let's say we have a linked list with 5 nodes, and head points to first node
-# now tell me, what the following code outputs
-head = [1, 2, 3, 4, 5] 
-current = head
-length = 0
-n = 2
-while current:
-    length += 1
-    current = current.next
+nums = [-1,0]
+target = -1
+complements = {}
 
-current = head
+for i in range(len(nums)):
+    complement = target - nums[i]
 
-for _ in range(length - n):
-    current = current.next
-
+    if complement not in complements:
+        complements[complement] = i
+    
+    if nums[i] in complements:
+        print(complements[nums[i]]+1, i+1)
 
